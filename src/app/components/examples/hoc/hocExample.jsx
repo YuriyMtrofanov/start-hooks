@@ -6,7 +6,6 @@ import Divider from "../../common/divider";
 import withLogin from "./withLogin";
 import withPropsStyles from "./withPropsStyles";
 
-localStorage.setItem("auth", "token");
 // HOC - это функция, которая принимает в себя компонент и возвращает либо
 // новый компонент, либо обновленный компонент, либо вообще другой компонент
 // например <Redirect />. HOC может содержать как логические итераторы, так
