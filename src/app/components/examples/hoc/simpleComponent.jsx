@@ -3,8 +3,12 @@ import PropTypes from "prop-types";
 
 const SimpleComponent = ({ onLogin, onLogOut, isAuth }) => {
     const [buttonName, setButtonName] = useState();
+    // useEffect(() => {
+    //     isAuth === false ? setButtonName("Войти") : setButtonName("Выйти из системы");
+    // }, [isAuth]);
+    // console.log("auth", isAuth, "button", buttonName);
     useEffect(() => {
-        isAuth === false ? setButtonName("Войти") : setButtonName("Выйти из системы");
+        isAuth ? setButtonName("Выйти из системы") : setButtonName("Войти");
     }, [isAuth]);
     return (
         <>

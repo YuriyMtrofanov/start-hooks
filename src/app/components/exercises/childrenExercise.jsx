@@ -43,7 +43,7 @@ const ChildrenExercise = () => {
 };
 
 const Component = ({ value }) => {
-    return <div> {`Компонент списка ${value}`} </div>;
+    return <div> Компонент списка {value} </div>;
 };
 
 Component.propTypes = {

@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import CardWrapper from "../../common/Card";
 
 const withFunctions = (SimpleComponent) => () => {
-    const [isAuth, setIsAuth] = useState(false);
+    const isAuth = localStorage.getItem("auth", "token") === "token";
     const hanleLogin = () => {
         localStorage.setItem("auth", "token");
-        setIsAuth(true);
+        location.reload(); // Не знаю нужно ли принудительно перезагружать страницу, но я добавил метод
     };
     const hanleLogout = () => {
         localStorage.removeItem("auth", "token");
-        setIsAuth(false);
+        location.reload();
     };
     return (
         <CardWrapper>
